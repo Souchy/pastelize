@@ -1,0 +1,22 @@
+{
+    "name": "pastelize",
+    "displayName": "pastelize",
+    "description": "mythemedesc",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.66.0"
+    },
+    "author": "Souchy",
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "pastelize",
+                "uiTheme": "vs-dark",
+                "path": "./themes/pastelize-color-theme.json"
+            }
+        ]
+    }
+}
