@@ -2,7 +2,7 @@
     "name": "pastelize",
     "displayName": "pastelize",
     "description": "mythemedesc",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "engines": {
         "vscode": "^1.66.0"
     },
@@ -10,7 +10,9 @@
     "categories": [
         "Themes"
     ],
-    "repository": { "url": "https://github.com/Souchy/pastelize.git" },
+    "repository": {
+        "url": "https://github.com/Souchy/pastelize.git"
+    },
     "contributes": {
         "themes": [
             {
