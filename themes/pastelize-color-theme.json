@@ -1,25 +1,25 @@
 {
 	"name": "pastelize",
 	"colors": {
-		"editor.background": "#1f2223",
+		"editor.background": "#151718",
 		"editor.foreground": "#E0E2E4",
 
-		//"panel.background": "#1f2223", // does nothing
+		//"panel.background": "#151718", // does nothing
 		//"editorPane.background": "#e44d07", // does nothing
-		"menu.background": "#1f2223",
-		"sideBar.background": "#1f2223",
+		"menu.background": "#151718",
+		"sideBar.background": "#151718",
 		"sideBarSectionHeader.background": "#242829",
 		"dropdown.background": "#242829",
 		
-		"activityBar.background": "#1f2223",
-		"titleBar.activeBackground": "#1f2223",
+		"activityBar.background": "#151718",
+		"titleBar.activeBackground": "#151718",
 
 		"editorGroupHeader.tabsBackground": "#242829",
-		"tab.activeBackground": "#1f2223",
+		"tab.activeBackground": "#151718",
 		"tab.inactiveBackground": "#242829",
 
-		"statusBar.background": "#1f2223",
-		"statusBarItem.remoteBackground": "#1f2223",
+		"statusBar.background": "#151718",
+		"statusBarItem.remoteBackground": "#151718",
 
 		"activityBarBadge.background": "#007acc",
 		"sideBarTitle.foreground": "#bbbbbb"
