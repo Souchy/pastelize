@@ -444,7 +444,7 @@
 				// "variable.other.event",
 				// "entity.name.label",
 				// "entity.name.namespace",
-				// "keyword.operator.new",
+				"keyword.operator.new",
 				// "variable.parameter",
 				// "variable.other.property.cli",
 				// "entity.name.type.class.reference",
