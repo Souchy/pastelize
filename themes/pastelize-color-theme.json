@@ -1,30 +1,25 @@
 {
 	"name": "pastelize",
 	"colors": {
-		"editor.background": "#1c1f1f",
+		"editor.background": "#1e2021",
 		"editor.foreground": "#E0E2E4",
-// 1f2223
-		// "panel.background": "#1c1f1f", // does nothing
+		// 1f2223 // 1e2021
+		// "panel.background": "#1e2021", // does nothing
 		// "editorPane.background": "#e44d07", // does nothing
-		"menu.background": "#1c1f1f",
-		"sideBar.background": "#1c1f1f",
+		"menu.background": "#1e2021",
+		"sideBar.background": "#1e2021",
 		"sideBarSectionHeader.background": "#242829",
 		"dropdown.background": "#242829",
-		
-		"activityBar.background": "#1c1f1f",
-		"titleBar.activeBackground": "#1c1f1f",
-
+		"activityBar.background": "#1e2021",
+		"titleBar.activeBackground": "#1e2021",
 		"editorGroupHeader.tabsBackground": "#242829",
-		"tab.activeBackground": "#1c1f1f",
+		"tab.activeBackground": "#1e2021",
 		"tab.inactiveBackground": "#242829",
-
-		"statusBar.background": "#1c1f1f",
-		"statusBarItem.remoteBackground": "#1c1f1f",
-
+		"statusBar.background": "#1e2021",
+		"statusBarItem.remoteBackground": "#1e2021",
 		"activityBarBadge.background": "#007acc",
 		"sideBarTitle.foreground": "#bbbbbb"
 	},
-	
 	"tokenColors": [
 		{
 			"name": "Comment",
@@ -41,7 +36,9 @@
 		{
 			"name": "Variables local",
 			"scope": [
-				"variable",
+				"variable", // everything about variables
+				// 		"variable.other.readwrite", // local var
+				// 		"variable.parameter" // param
 				"string constant.other.placeholder"
 			],
 			"settings": {
@@ -50,12 +47,26 @@
 			}
 		},
 		{
-			"name": "Function variable Argument !",
+			"name": "properties",
 			"scope": [
-				"variable.parameter"
+				// "variable.object.property", // property declaration
+				"variable.other.constant", // THREE
+				"variable.other.property", // property call
+				"variable.other.object.property", // property call
+				"meta.export.default", // things like { x: 0 } and JSON.stringify (the json part)
+				"meta.object.member", // things like { x: 0 }
+				// "new.expr", // doesnt work
 			],
 			"settings": {
-				"foreground": "#e0e4e2"
+				"foreground": "#678CB1"
+			}
+		},
+		{
+			"name": "test",
+			"scope": [
+			],
+			"settings": {
+				"foreground": "#f72803",
 			}
 		},
 		{
@@ -86,7 +97,7 @@
 				"constant.language", // true
 				"variable.language", // this
 				"punctuation.definition.directive.cpp",
-				"keyword.operator.new"
+				"keyword.operator.new",
 			],
 			"settings": {
 				"foreground": "#a57b61"
@@ -120,13 +131,12 @@
 				"punctuation.section.embedded",
 				"keyword.other.template",
 				"keyword.other.substitution",
-				"editorBracketHighlight.foreground1"
 			],
 			"settings": {
 				"foreground": "#95bed8"
 			}
 		},
-/*
+		/*
 		{
 			"name": "Tag",
 			"scope": [
@@ -280,24 +290,64 @@
 			}
 		},
 */
-
-// ----------------------------------------------------
-		
-		{
-			"name": "Field",
-			"scope": [
-				"variable.other",
-				"variable.other.property",
-				"variable.other.property.static"
-			],
-			"settings": {
-				"foreground":"#678CB1"
-			}
-		},
+		// ---------------------------------------------------- vars
+		// {
+		// 	"name": "Field",
+		// 	"scope": [
+		// 		// "variable",
+		// 	],
+		// 	"settings": {
+		// 		// "foreground": "#d8e1e9"
+		// 		"foreground": "#678CB1"
+		// 		// "foreground": "#ff0000"
+		// 	}
+		// },
+		// {
+		// 	"name": "Field call / last level call",
+		// 	"scope": [
+		// 		// "variable.parameter",
+		// 		// "variable.other",
+		// 		// "variable.readonly",
+		// 		"variable.other.property",
+		// 		"variable.other.constant",
+		// 		"variable.other.property.static",
+		// 		"variable.other.constant.property"
+		// 	],
+		// 	"settings": {
+		// 		"foreground": "#678CB1"
+		// 	}
+		// },
+		// {
+		// 	"name": "Local variables & first level calls & console",
+		// 	"scope": [
+		// 		// "variable.other",
+		// 	],
+		// 	"settings": {
+		// 		"foreground": "#678CB1"
+		// 		// "foreground": "#d8e1e9",
+		// 	}
+		// },
+		// {
+		// 	"name": "local var",
+		// 	"scope": [
+		// 		"variable.other.readwrite",
+		// 		"entity.name.variable",
+		// 		// "variable.other.constant"
+		// 		"variable.function",
+		// 		// "variable.function",
+		// 		// "support.other.variable",
+		// 		// "meta.block variable.other",
+		// 	],
+		// 	"settings": {
+		// 		"foreground": "#d8e1e9",
+		// 	}
+		// },
+		// -----------------------
 		{
 			"name": "Type",
 			"scope": [
 				"entity.name.type",
+				"support.type", // types like any or string in ts
 				"meta.qualified_type.cpp",
 				"entity.name.scope-resolution.function.definition.cpp",
 				"entity.name.type.parameter.cpp",
@@ -307,17 +357,15 @@
 				"meta.block.class.cpp"
 			],
 			"settings": {
-				"foreground":"#678CB1"
-				//"foreground":"#9aceff"
+				"foreground": "#678CB1"
+				// "foreground":"#9aceff"
 				//"foreground":"#1c91df"
 			}
 		},
 		{
 			"name": "",
 			"scope": [
-				//"support.type"
 				//"entity.name.type"
-
 				// "entity.name.type.class.cpp",
 				//"meta.body.class.cpp",
 				//"meta.block.class.cpp"
@@ -333,7 +381,7 @@
 				"meta.template.definition.cpp"
 			],
 			"settings": {
-				"foreground":"#24a6f1"
+				"foreground": "#24a6f1"
 				//"foreground":"#1c91df"
 			}
 		},
@@ -341,7 +389,7 @@
 			"name": "Defined Macro",
 			"scope": "entity.name.function.preprocessor",
 			"settings": {
-				"foreground":"#1eb2bd"
+				"foreground": "#1eb2bd"
 			}
 		},
 		{
@@ -362,23 +410,20 @@
 				"foreground": "#A082BD"
 			}
 		},
-
-
-			
 		{
 			"name": "static function",
 			"scope": [
 				"entity.name.function.member.static"
 			],
 			"settings": {
-				"foreground":"#E0E2E4"
+				"foreground": "#E0E2E4"
 			}
 		},
-		
 		{
 			"name": "Function declarations",
 			"scope": [
 				"entity.name.function",
+				"support.function.json",
 				// "entity.name.function.call.cpp",
 				"entity.name.function.definition.cpp",
 			],
@@ -398,7 +443,7 @@
 			"settings": {
 				//"foreground": "#0cc760"
 				//"foreground": "#ff00dd"
-				"foreground":"#E0E2E4"
+				"foreground": "#E0E2E4"
 			}
 		},
 		// {
@@ -420,7 +465,7 @@
 				"meta.function.definition.cpp",
 			],
 			"settings": {
-				"foreground":"#678CB1"
+				"foreground": "#678CB1"
 				// "foreground": "#b6072f"
 			}
 		},
@@ -434,8 +479,6 @@
 		// 		// "foreground": "#95bed8"
 		// 	}
 		// },
-
-
 		{
 			"name": "functions",
 			"scope": [
@@ -467,13 +510,11 @@
 				// "support.function.construct",
 				// "keyword.other.special-method",
 				// "meta.block-level"
-				
 				// "entity.name.function.definition",
 				// "entity.name.function.call.cpp",
 				// "entity.name.function.member.static",
 				// "entity.name.function",
 				// "variable.function",
-
 				// "entity.name.function.constructor",
 				// "entity.name.function.member",
 				// "meta.body.function.definition.cpp",
@@ -483,22 +524,15 @@
 				"foreground": "#b6072f"
 			}
 		},
-
-
-
-// -----------------------------------------------------------------------------------------------------------------
-// -----------------------------------------------------------------------------------------------------------------
-// -----------------------------------------------------------------------------------------------------------------
-// -----------------------------------------------------------------------------------------------------------------
-// -----------------------------------------------------------------------------------------------------------------
-// -----------------------------------------------------------------------------------------------------------------
-// -----------------------------------------------------------------------------------------------------------------
-// -----------------------------------------------------------------------------------------------------------------
-// -----------------------------------------------------------------------------------------------------------------
-
-
-
-
+		// -----------------------------------------------------------------------------------------------------------------
+		// -----------------------------------------------------------------------------------------------------------------
+		// -----------------------------------------------------------------------------------------------------------------
+		// -----------------------------------------------------------------------------------------------------------------
+		// -----------------------------------------------------------------------------------------------------------------
+		// -----------------------------------------------------------------------------------------------------------------
+		// -----------------------------------------------------------------------------------------------------------------
+		// -----------------------------------------------------------------------------------------------------------------
+		// -----------------------------------------------------------------------------------------------------------------
 		{
 			"name": "CSS Class and Support",
 			"scope": [
