@@ -3,6 +3,24 @@
 	"colors": {
 		"editor.background": "#1f2223",
 		"editor.foreground": "#E0E2E4",
+
+		//"panel.background": "#1f2223", // does nothing
+		//"editorPane.background": "#e44d07", // does nothing
+		"menu.background": "#1f2223",
+		"sideBar.background": "#1f2223",
+		"sideBarSectionHeader.background": "#242829",
+		"dropdown.background": "#242829",
+		
+		"activityBar.background": "#1f2223",
+		"titleBar.activeBackground": "#1f2223",
+
+		"editorGroupHeader.tabsBackground": "#242829",
+		"tab.activeBackground": "#1f2223",
+		"tab.inactiveBackground": "#242829",
+
+		"statusBar.background": "#1f2223",
+		"statusBarItem.remoteBackground": "#1f2223",
+
 		"activityBarBadge.background": "#007acc",
 		"sideBarTitle.foreground": "#bbbbbb"
 	},
@@ -79,13 +97,13 @@
 				"keyword.operator",
 				"storage.modifier.reference",
 				"punctuation.separator.scope-resolution.cpp",
-				"storage.modifier.pointer.cpp"
+				"storage.modifier.pointer.cpp",
+				"punctuation.terminator.statement.cpp"
 			],
 			"settings": {
-				"foreground": "#f7f7d8"
+				"foreground": "#95bed8"
 			}
 		},
-/*
 		{
 			"name": "Operator, Misc",
 			"scope": [
@@ -103,9 +121,10 @@
 				"keyword.other.substitution"
 			],
 			"settings": {
-				"foreground": "#a57b61"
+				"foreground": "#95bed8"
 			}
 		},
+/*
 		{
 			"name": "Tag",
 			"scope": [
@@ -275,17 +294,33 @@
 		{
 			"name": "Type",
 			"scope": [
-				// "entity.name.type",
+				"entity.name.type",
 				"meta.qualified_type.cpp",
 				"entity.name.scope-resolution.function.definition.cpp",
 				"entity.name.type.parameter.cpp",
 				"entity.name.scope-resolution.function.call.cpp",
-				"entity.name.scope-resolution.cpp"
+				"entity.name.scope-resolution.cpp",
+				"meta.body.class.cpp",
+				"meta.block.class.cpp"
 			],
 			"settings": {
 				"foreground":"#678CB1"
 				//"foreground":"#9aceff"
 				//"foreground":"#1c91df"
+			}
+		},
+		{
+			"name": "",
+			"scope": [
+				//"support.type"
+				//"entity.name.type"
+
+				//"entity.name.type.class.cpp",
+				//"meta.body.class.cpp",
+				//"meta.block.class.cpp"
+			],
+			"settings": {
+				"foreground": "#FF0000",
 			}
 		},
 		{
@@ -348,18 +383,19 @@
 				// "foreground": "#ff00dd"
 			}
 		},
-		// {
-		// 	"name": "Ctor/Dtor declarations only in the header",
-		// 	"scope": [
-		// 		"entity.name.function.constructor.cpp",
-		// 		"entity.name.function.destructor.cpp",
-		// 		// "entity.name.function.call.cpp"
-		// 	],
-		// 	"settings": {
-		// 		"foreground": "#0cc760"
-		// 		// "foreground": "#ff00dd"
-		// 	}
-		// },
+		{
+			"name": "Ctor/Dtor declarations only in the header",
+			"scope": [
+				"entity.name.function.constructor.cpp",
+				"entity.name.function.destructor.cpp",
+				// "entity.name.function.call.cpp"
+			],
+			"settings": {
+				//"foreground": "#0cc760"
+				//"foreground": "#ff00dd"
+				"foreground":"#E0E2E4"
+			}
+		},
 		// {
 		// 	"name": "Function calls that includes constructors declaration in the .cpp",
 		// 	"scope": [

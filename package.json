@@ -1,8 +1,8 @@
 {
     "name": "pastelize",
     "displayName": "Pastelize",
-    "description": "Pastel theme like in Eclipse",
-    "version": "0.0.1",
+    "description": "Pastel theme like in Eclipse. For C++",
+    "version": "0.0.4",
     "engines": {
         "vscode": "^1.66.0"
     },
