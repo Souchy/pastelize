@@ -1,25 +1,25 @@
 {
 	"name": "pastelize",
 	"colors": {
-		"editor.background": "#151718",
+		"editor.background": "#1c1f1f",
 		"editor.foreground": "#E0E2E4",
-
-		//"panel.background": "#151718", // does nothing
-		//"editorPane.background": "#e44d07", // does nothing
-		"menu.background": "#151718",
-		"sideBar.background": "#151718",
+// 1f2223
+		// "panel.background": "#1c1f1f", // does nothing
+		// "editorPane.background": "#e44d07", // does nothing
+		"menu.background": "#1c1f1f",
+		"sideBar.background": "#1c1f1f",
 		"sideBarSectionHeader.background": "#242829",
 		"dropdown.background": "#242829",
 		
-		"activityBar.background": "#151718",
-		"titleBar.activeBackground": "#151718",
+		"activityBar.background": "#1c1f1f",
+		"titleBar.activeBackground": "#1c1f1f",
 
 		"editorGroupHeader.tabsBackground": "#242829",
-		"tab.activeBackground": "#151718",
+		"tab.activeBackground": "#1c1f1f",
 		"tab.inactiveBackground": "#242829",
 
-		"statusBar.background": "#151718",
-		"statusBarItem.remoteBackground": "#151718",
+		"statusBar.background": "#1c1f1f",
+		"statusBarItem.remoteBackground": "#1c1f1f",
 
 		"activityBarBadge.background": "#007acc",
 		"sideBarTitle.foreground": "#bbbbbb"
@@ -85,7 +85,8 @@
 				"storage.modifier",
 				"constant.language", // true
 				"variable.language", // this
-				"punctuation.definition.directive.cpp"
+				"punctuation.definition.directive.cpp",
+				"keyword.operator.new"
 			],
 			"settings": {
 				"foreground": "#a57b61"
@@ -107,7 +108,7 @@
 		{
 			"name": "Operator, Misc",
 			"scope": [
-				"keyword.control",
+				// "keyword.control",
 				"constant.other.color",
 				"punctuation",
 				"meta.tag",
@@ -118,7 +119,8 @@
 				"punctuation.definition.tag.end.html",
 				"punctuation.section.embedded",
 				"keyword.other.template",
-				"keyword.other.substitution"
+				"keyword.other.substitution",
+				"editorBracketHighlight.foreground1"
 			],
 			"settings": {
 				"foreground": "#95bed8"
@@ -284,6 +286,7 @@
 		{
 			"name": "Field",
 			"scope": [
+				"variable.other",
 				"variable.other.property",
 				"variable.other.property.static"
 			],
@@ -315,7 +318,7 @@
 				//"support.type"
 				//"entity.name.type"
 
-				//"entity.name.type.class.cpp",
+				// "entity.name.type.class.cpp",
 				//"meta.body.class.cpp",
 				//"meta.block.class.cpp"
 			],
@@ -375,6 +378,7 @@
 		{
 			"name": "Function declarations",
 			"scope": [
+				"entity.name.function",
 				// "entity.name.function.call.cpp",
 				"entity.name.function.definition.cpp",
 			],
@@ -386,6 +390,7 @@
 		{
 			"name": "Ctor/Dtor declarations only in the header",
 			"scope": [
+				"entity.name.function.constructor",
 				"entity.name.function.constructor.cpp",
 				"entity.name.function.destructor.cpp",
 				// "entity.name.function.call.cpp"
@@ -419,16 +424,16 @@
 				// "foreground": "#b6072f"
 			}
 		},
-		{
-			"name": "all other punctuation like ; (), {}",
-			"scope": [
-				"punctuation"
-			],
-			"settings": {
-				//"foreground": "#ffffff"
-				"foreground": "#95bed8"
-			}
-		},
+		// {
+		// 	"name": "all other punctuation like ; (), {}",
+		// 	"scope": [
+		// 		"punctuation"
+		// 	],
+		// 	"settings": {
+		// 		"foreground": "#f00505"
+		// 		// "foreground": "#95bed8"
+		// 	}
+		// },
 
 
 		{
@@ -444,7 +449,7 @@
 				// "variable.other.event",
 				// "entity.name.label",
 				// "entity.name.namespace",
-				"keyword.operator.new",
+				// "keyword.operator.new",
 				// "variable.parameter",
 				// "variable.other.property.cli",
 				// "entity.name.type.class.reference",
